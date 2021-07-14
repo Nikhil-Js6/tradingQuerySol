@@ -41,19 +41,23 @@ def fp():
 ##Info functions :
 
 def fiInfo():
-    print("\nFI stands for Find Interest: \nUsing this method you can find Componded value for an Amount"
+    print("\nFI stands for Find Interest:"
+    "\nUsing this method you can find Componded value for an Amount"
     "\nYou just have to put Initial Amount, % Interest and Total no. of Compunding cycles.\n")
 
 def faInfo():
-    print("\nFA stands for Find Amount: \nUsing this method you can find the Amount you Gained or Lost in a trade."
+    print("\nFA stands for Find Amount:"
+    "\nUsing this method you can find the Amount you Gained or Lost in a trade."
     "\nYou just have to put Buy Price, Sell Price and Quantity.")
 
 def fdInfo():
-    print("\nFD stands for Find Difference: \nUsing this method you can find the % difference between two prices"
+    print("\nFD stands for Find Difference:"
+    "\nUsing this method you can find the % difference between two prices"
     "\nYou just have to put Initial Price and Final Price.")
 
 def fpInfo():
-    print("\nFP stands for Find Price: \nUsing this method you can find the price for given % change"
+    print("\nFP stands for Find Price:" 
+    "\nUsing this method you can find what will the Price after given % change"
     "\nYou just have to put Current Price % Change for this price")
 
 def allInfo():
