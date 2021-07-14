@@ -9,4 +9,4 @@ For Example,
     copy and paste the link in your terminal:
     Just clone it in your Directory and run with python, Using the command "python fi.py".
     
-    git clone git@github.com:Nikhil-pahal-js/tradingQuerySol.git
+    git clone https://github.com/Nikhil-pahal-js/tradingQuerySol.git
