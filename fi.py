@@ -114,6 +114,6 @@ while 1:
         "\nType 'exit' or 'ext ' to exit the program"
         "\nType '[option] -in' to know more about any option"
         "\nFor Example: 'fa -in' for more info about: 'fa' "
-        "\n type 'all in' to know about all methods")
+        "\n type 'all -in' to know about all methods")
     else:
         print(">> Wrong Input \n Kindly choose a correct option --")
