@@ -8,5 +8,6 @@ For Example,
     You can find what will be the price of a security after a given Change in it's price( in % ).
     
     copy and paste the link in your terminal:
-    git clone git@github.com:Nikhil-pahal-js/tradingQuerySol.git
     Just clone it in your Directory and run with python, Using the command "python fi.py".
+    
+    git clone git@github.com:Nikhil-pahal-js/tradingQuerySol.git
