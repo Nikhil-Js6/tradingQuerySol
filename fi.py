@@ -103,7 +103,7 @@ def allInfo():
     fnInfo()
     fcInfo()
     fpInfo()
-
+sec=(s+e+c+l)
 while 1:
     print("\n>> What do you want to Run >>")
     opt = input()
