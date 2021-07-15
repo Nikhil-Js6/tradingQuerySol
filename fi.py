@@ -1,16 +1,18 @@
-import os,math
+import os,jwt,math,webbrowser
 clear = lambda: os.system('cls')
 
-print(">> Hi.. Baby !!")
-print("-- Welcome to the Terminal <<\n\n>>Type :")
+print("\n>> Hi.. Baby !!")
+print("-- Welcome to the Terminal <<\n")
 
-      
-   print("\nfi : >To Find Compounded Growth",
-         "\nfn : >To Find Net Gain/Loss",
-         "\nfc : >To Find % of Change in price",
-         "\nfp : >To Find Price after a given % of Change",
-         "\nfr : >To Find Return and % Return",
-         "\n-help : for help")
+def op():
+    print(">>Type : \n"
+          "\n  >>1, fi : -To Find Compounded Growth\n",
+          " >>2, fn : -To Find Net Gain/Loss\n",
+          " >>3, fc : -To Find % of Change in price\n",
+          " >>4, fp : -To Find Price after a given % of Change\n",
+          " >>5, fr : -To Find Return and % Return\n",
+          " -help : for help")
+op()
 
 # Calculate functions :
 
@@ -49,7 +51,7 @@ def fp():
     per = y/100
     res = (x + (x * per))
     print(">> The final price may be : ", res)
-   
+
 def fr():
     print("Calculate Net Return : ")
     n = int(input(">> Amount : "))
@@ -61,10 +63,18 @@ def fr():
     pret = (((ret - n)/n)*100)
     print(">> Return(%) :", pret, "%")
     gain = (quant * (y - x))
-    print(">> Net Gain : ", gain)   
+    print(">> Net Gain : ", gain)
 
 
 ##Info functions :
+def onHelp():
+    print("\n>> Type '[option] -in' to know more about any option"
+    "\n>> For Example: 'fa -in' or 'fa -info' for more info about: 'fa' "
+    "\n>> Type 'op' to see options list"
+    "\n>> Type 'all -in' to know about all methods"
+    "\n>> Type 'clear', 'cls', or 'clr' to clear the console"
+    "\n>> Type 'rs' or 'restart' or 'rst' to restart"
+    "\n>> Type 'exit' or 'ext ' to exit the program")
 
 def fiInfo():
     print("\nFI stands for Find Interest: \nUsing this method you can find Compounded value for an Amount"
@@ -81,11 +91,11 @@ def fcInfo():
 def fpInfo():
     print("\nFP stands for Find Price: \nUsing this method you can find how much the price will be,after given % change"
     "\nYou just have to put Current Price % Change for this Price.")
-     
+
 def frInfo():
     print("\nFR stands for Find Return: \nUsing this method you can find the Net Value, %Return and Net Gain in a trade"
     "\nYou just have to put the Investment Amount, Buy Price and Sell Price.")
-   
+
 def allInfo():
     fiInfo()
     fnInfo()
@@ -97,25 +107,25 @@ while 1:
     opt = input()
     opt = opt.lower()
 
-    if(opt == "fi"):
+    if(opt == "fi" or opt =="1"):
         fi()
-    elif(opt == "fi -in" or opt == "fi -info'):
+    elif(opt == "fi -in" or opt == "fi -info"):
         fiInfo()
-    elif(opt == "fn"):
+    elif(opt == "fn" or opt =="2"):
         fn()
-    elif(opt == "fn -in" or opt == "fn -info'):
+    elif(opt == "fn -in" or opt == "fn -info"):
         fnInfo()
-    elif(opt == "fc"):
+    elif(opt == "fc" or opt =="3"):
         fc()
-    elif(opt == "fc -in" or opt == "fc -info'):
+    elif(opt == "fc -in" or opt == "fc -info"):
         fcInfo()
-    elif(opt == "fp"):
+    elif(opt == "fp" or opt =="4"):
         fp()
-    elif(opt == "fp -in" or opt == "fp -info'):
+    elif(opt == "fp -in" or opt == "fp -info"):
         fpInfo()
-    elif(opt == "fr"):
+    elif(opt == "fr" or opt =="5"):
         fr()
-    elif(opt == "fr -in" or opt == "fr -info'):
+    elif(opt == "fr -in" or opt == "fr -info"):
         frInfo()
     elif(opt == "all -in"):
         allInfo()
@@ -129,13 +139,7 @@ while 1:
     elif(opt == "rs" or opt == "restart" or opt == "rst"):
         clear()
         os.system('fi.py')
-    elif(opt == "-help"):
-        print("\nType '[option] -in' to know more about any option"
-        "\nFor Example: 'fa -in' or 'fa -info' for more info about: 'fa' "
-        "\nType 'op' to see options list"
-        "\nType 'all -in' to know about all methods"
-        "\nType 'clear', 'cls', or 'clr' to clear the console"
-        "\nType 'rs' or 'restart' or 'rst' to restart"
-        "\nType 'exit' or 'ext ' to exit the program")
+    elif(opt == "help" or opt == "-help"):
+        onHelp()
     else:
         print(">> Wrong Input \n Kindly choose a correct option >>")
