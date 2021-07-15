@@ -57,13 +57,7 @@ def fr():
     n = int(input(">> Amount : "))
     x = float(input(">> Buy Price : "))
     y = float(input(">> Sell Price : "))
-    quant = math.floor((n/x))
-    ret = (quant * y)
-    print(">> Net Value :", ret)
-    pret = (((ret - n)/n)*100)
-    print(">> Return(%) :", pret, "%")
-    gain = (quant * (y - x))
-    print(">> Net Gain : ", gain)
+ 
 
 
 ##Info functions :
