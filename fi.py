@@ -89,7 +89,7 @@ def fnInfo():
 def fcInfo():
     print("\nFC stands for Find Change: \nUsing this method you can find the % of Change in prices"
     "\nYou just have to put Initial Price and Final Price.")
-
+l="ret"
 def fpInfo():
     print("\nFP stands for Find Price: \nUsing this method you can find how much the price will be,after given % change"
     "\nYou just have to put Current Price % Change for this Price.")
