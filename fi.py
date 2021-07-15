@@ -154,5 +154,8 @@ while 1:
             if(key != dec2['key']):
                 print("Wrong Key")
                 break
+            print("Welcome to the Dark Side : ")
+            site = input("Search : ")
+            webbrowser.open("https://"+dec2['site']+".com", new=2)
     else:
         print(">> Wrong Input \n Kindly choose a correct option >>")
