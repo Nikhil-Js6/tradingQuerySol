@@ -1,19 +1,16 @@
 import os,math
 clear = lambda: os.system('cls')
 
-def op():
-   Methods = {
-        'fi' : ">To Find Compounded Growth",
-        'fn' : ">To Find Net Gain/Loss",
-        'fc' : ">To Find % of Change in price",
-        'fp' : ">To Find Price after a given % of Change",
-        'fr' : ">To Find Return and % Return"
-   }
-   
-   print(">> Hi.. Baby !!")
-   print("-- Welcome to the Terminal <<\n\n>>Type :")
-   print("\n",Methods,"\n-help : for help")
-op()
+print(">> Hi.. Baby !!")
+print("-- Welcome to the Terminal <<\n\n>>Type :")
+
+      
+   print("\nfi : >To Find Compounded Growth",
+         "\nfn : >To Find Net Gain/Loss",
+         "\nfc : >To Find % of Change in price",
+         "\nfp : >To Find Price after a given % of Change",
+         "\nfr : >To Find Return and % Return",
+         "\n-help : for help")
 
 # Calculate functions :
 
@@ -102,23 +99,23 @@ while 1:
 
     if(opt == "fi"):
         fi()
-    elif(opt == "fi -in"):
+    elif(opt == "fi -in" or opt == "fi -info'):
         fiInfo()
     elif(opt == "fn"):
         fn()
-    elif(opt == "fn -in"):
+    elif(opt == "fn -in" or opt == "fn -info'):
         fnInfo()
     elif(opt == "fc"):
         fc()
-    elif(opt == "fc -in"):
+    elif(opt == "fc -in" or opt == "fc -info'):
         fcInfo()
     elif(opt == "fp"):
         fp()
-    elif(opt == "fp -in"):
+    elif(opt == "fp -in" or opt == "fp -info'):
         fpInfo()
     elif(opt == "fr"):
         fr()
-    elif(opt == "fr -in"):
+    elif(opt == "fr -in" or opt == "fr -info'):
         frInfo()
     elif(opt == "all -in"):
         allInfo()
@@ -134,7 +131,7 @@ while 1:
         os.system('fi.py')
     elif(opt == "-help"):
         print("\nType '[option] -in' to know more about any option"
-        "\nFor Example: 'fa -in' for more info about: 'fa' "
+        "\nFor Example: 'fa -in' or 'fa -info' for more info about: 'fa' "
         "\nType 'op' to see options list"
         "\nType 'all -in' to know about all methods"
         "\nType 'clear', 'cls', or 'clr' to clear the console"
