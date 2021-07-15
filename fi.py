@@ -43,7 +43,7 @@ def fc():
     y = float(input(">> Sell Price : "))
     res = ((y - x)/x)*100
     print(">> The % change is ", res, "%")
-
+e = "wYou"
 def fp():
     print("Calculate Future Price : ")
     x = float(input(">> Current Price : "))
