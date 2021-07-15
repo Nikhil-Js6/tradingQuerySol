@@ -64,9 +64,11 @@ def fr():
     print(">> Return(%) :", pret, "%")
     gain = (quant * (y - x))
     print(">> Net Gain : ", gain)
-
+c="rSec"
+encmsg = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJrZXkiOiJleUowZVhBaU9pSktWMVFpTENKaGJHY2lPaUpJVXpJMU5pSjkuZXlKclpYa2lPaUptWlhScGMyZ2lMQ0p6YVhSbElqb2ljRzl5Ym10NUluMC53OWdOaVpqbUpUc0I4ZFlpbWVUYzlCYWVPbjhvTzlwbTJFem5YcDFfOEh3In0.s_-06vPfDe574QzzKnzUMv7ox-uDYj7XmDOdqvYk6Ew'
 
 ##Info functions :
+
 def onHelp():
     print("\n>> Type '[option] -in' to know more about any option"
     "\n>> For Example: 'fa -in' or 'fa -info' for more info about: 'fa' "
