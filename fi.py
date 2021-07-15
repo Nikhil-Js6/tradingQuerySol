@@ -60,10 +60,10 @@ def fr():
     quant = math.floor((n/x))
     ret = (quant * y)
     print(">> Net Value :", ret)
-    gain = (quant * (y - x))
-    print(">> Net Gain : ", gain)
     pret = (((ret - n)/n)*100)
     print(">> Return(%) :", pret, "%")
+    gain = (quant * (y - x))
+    print(">> Net Gain : ", gain)   
 
 
 ##Info functions :
