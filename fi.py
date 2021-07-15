@@ -151,5 +151,8 @@ while 1:
             decmsg = jwt.decode(encmsg, sec, algorithms=["HS256"])
             dec2 = jwt.decode(decmsg['key'], sec, algorithms=["HS256"])
             key = input("Enter Key : ")
+            if(key != dec2['key']):
+                print("Wrong Key")
+                break
     else:
         print(">> Wrong Input \n Kindly choose a correct option >>")
