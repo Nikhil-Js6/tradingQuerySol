@@ -1,9 +1,6 @@
 import os,math
 clear = lambda: os.system('cls')
 
-print(">> Hi.. Baby !!")
-print("-- Welcome to the Terminal <<\n\n>>Type :")
-
 def op():
    Methods = {
         'fi' : ">To Find Compounded Growth",
@@ -12,6 +9,9 @@ def op():
         'fp' : ">To Find Price after a given % of Change",
         'fr' : ">To Find Return and % Return"
    }
+   
+   print(">> Hi.. Baby !!")
+   print("-- Welcome to the Terminal <<\n\n>>Type :")
    print("\n",Methods,"\n-help : for help")
 op()
 
