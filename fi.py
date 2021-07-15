@@ -83,8 +83,12 @@ def fcInfo():
 
 def fpInfo():
     print("\nFP stands for Find Price: \nUsing this method you can find how much the price will be,after given % change"
-    "\nYou just have to put Current Price % Change for this price")
-
+    "\nYou just have to put Current Price % Change for this Price.")
+     
+def frInfo():
+    print("\nFR stands for Find Return: \nUsing this method you can find the Net Value, %Return and Net Gain in a trade"
+    "\nYou just have to put the Investment Amount, Buy Price and Sell Price.")
+   
 def allInfo():
     fiInfo()
     fnInfo()
