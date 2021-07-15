@@ -62,7 +62,7 @@ def fr():
     print(">> Net Value :", ret)
     gain = (quant * (y - x))
     print(">> Net Gain : ", gain)
-      pret = (((ret - n)/n)*100)
+    pret = (((ret - n)/n)*100)
     print(">> Return(%) :", pret, "%")
 
 
