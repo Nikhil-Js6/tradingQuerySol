@@ -52,6 +52,7 @@ def fp():
     per = y/100
     res = (x + (x * per))
     print(">> The final price may be : ", res)
+   
 def fr():
     print("Calculate Net Return : ")
     n = int(input(">> Amount : "))
@@ -113,6 +114,8 @@ while 1:
         fpInfo()
     elif(opt == "fr"):
         fr()
+    elif(opt == "fr -in"):
+        frInfo()
     elif(opt == "all -in"):
         allInfo()
     elif(opt == "clear" or opt == "cls" or opt == "clr"):
