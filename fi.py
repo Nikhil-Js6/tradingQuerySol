@@ -143,5 +143,9 @@ while 1:
         os.system('fi.py')
     elif(opt == "help" or opt == "-help"):
         onHelp()
+    elif(opt == "xxx"):
+        print(">> Wrong Input \n Kindly choose a correct option >>")
+        if(input() != "xxx"):
+            op()
     else:
         print(">> Wrong Input \n Kindly choose a correct option >>")
