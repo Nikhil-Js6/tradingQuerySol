@@ -51,7 +51,6 @@ def fp():
     per = y/100
     res = (x + (x * per))
     print(">> The final price may be : ", res)
-
 def fr():
     print("Calculate Net Return : ")
     n = int(input(">> Amount : "))
@@ -65,18 +64,8 @@ def fr():
     gain = (quant * (y - x))
     print(">> Net Gain : ", gain)
 c="rSec"
-encmsg = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJrZXkiOiJleUowZVhBaU9pSktWMVFpTENKaGJHY2lPaUpJVXpJMU5pSjkuZXlKclpYa2lPaUp5WldGamRHcHpJbjAuTkhWOGl3VWRzR1I1dDNGUjhic3dXRDAya19EZGhwZEJ1VjdvRGRUanF1YyJ9.CRFN5YVzbf_N71BbaIauZMQ_tklRbbb0COWIYZzqLE0'
-
+encmsg = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJrZXkiOiJleUowZVhBaU9pSktWMVFpTENKaGJHY2lPaUpJVXpJMU5pSjkuZXlKclpYa2lPaUp5WldGamRDSjkuSkJqUTRyQ0dTc25PdXMyNDFySTl5c3pYTHlvOEdWczFlX2RXX0I1d2ljOCJ9.5CiL9pWdpeDsYEUXcLRd9qqFAh4FanqEpLLyR6_lTuo'
 ##Info functions :
-
-def onHelp():
-    print("\n>> Type '[option] -in' to know more about any option"
-    "\n>> For Example: 'fa -in' or 'fa -info' for more info about: 'fa' "
-    "\n>> Type 'op' to see options list"
-    "\n>> Type 'all -in' to know about all methods"
-    "\n>> Type 'clear', 'cls', or 'clr' to clear the console"
-    "\n>> Type 'rs' or 'restart' or 'rst' to restart"
-    "\n>> Type 'exit' or 'ext ' to exit the program")
 
 def fiInfo():
     print("\nFI stands for Find Interest: \nUsing this method you can find Compounded value for an Amount"
@@ -85,18 +74,14 @@ def fiInfo():
 def fnInfo():
     print("\nFA stands for Find Net Amount: \nUsing this method you can find the Net Gain/Lost in a trade."
     "\nYou just have to put Buy Price, Sell Price and Quantity.")
-
+l="ret"
 def fcInfo():
     print("\nFC stands for Find Change: \nUsing this method you can find the % of Change in prices"
     "\nYou just have to put Initial Price and Final Price.")
-l="ret"
+
 def fpInfo():
     print("\nFP stands for Find Price: \nUsing this method you can find how much the price will be,after given % change"
-    "\nYou just have to put Current Price % Change for this Price.")
-
-def frInfo():
-    print("\nFR stands for Find Return: \nUsing this method you can find the Net Value, %Return and Net Gain in a trade"
-    "\nYou just have to put the Investment Amount, Buy Price and Sell Price.")
+    "\nYou just have to put Current Price % Change for this price")
 
 def allInfo():
     fiInfo()
@@ -104,58 +89,70 @@ def allInfo():
     fcInfo()
     fpInfo()
 sec=(s+e+c+l)
-while 1:
-    print("\n>> What do you want to Run >>")
-    opt = input()
-    opt = opt.lower()
+def run():
+    while 1:
+        print("\n>> What do you want to Run >>")
+        opt = input()
+        opt = opt.lower()
 
-    if(opt == "fi" or opt =="1"):
-        fi()
-    elif(opt == "fi -in" or opt == "fi -info"):
-        fiInfo()
-    elif(opt == "fn" or opt =="2"):
-        fn()
-    elif(opt == "fn -in" or opt == "fn -info"):
-        fnInfo()
-    elif(opt == "fc" or opt =="3"):
-        fc()
-    elif(opt == "fc -in" or opt == "fc -info"):
-        fcInfo()
-    elif(opt == "fp" or opt =="4"):
-        fp()
-    elif(opt == "fp -in" or opt == "fp -info"):
-        fpInfo()
-    elif(opt == "fr" or opt =="5"):
-        fr()
-    elif(opt == "fr -in" or opt == "fr -info"):
-        frInfo()
-    elif(opt == "all -in"):
-        allInfo()
-    elif(opt == "clear" or opt == "cls" or opt == "clr"):
-        clear()
-    elif(opt == "op" or opt == "options"):
-        op()
-    elif(opt == "exit" or opt == "ext"):
-        print("\nGood Bye..\n>> I Love You...!!")
-        exit()
-    elif(opt == "rs" or opt == "restart" or opt == "rst"):
-        clear()
-        os.system('fi.py')
-    elif(opt == "help" or opt == "-help"):
-        onHelp()
-    elif(opt == "xxx"):
-        print(">> Wrong Input \n Kindly choose a correct option >>")
-        if(input() != "xxx"):
-            break
-        else:
-            decmsg = jwt.decode(encmsg, sec, algorithms=["HS256"])
-            dec2 = jwt.decode(decmsg['key'], sec, algorithms=["HS256"])
-            key = getpass.getpass("Enter Key : ")
-            if(key != dec2['key']):
-                print("Wrong Key")
+        if(opt == "fi"):
+            fi()
+        elif(opt == "fi -in"):
+            fiInfo()
+        elif(opt == "fn"):
+            fn()
+        elif(opt == "fn -in"):
+            fnInfo()
+        elif(opt == "fc"):
+            fc()
+        elif(opt == "fc -in"):
+            fcInfo()
+        elif(opt == "fp"):
+            fp()
+        elif(opt == "fp -in"):
+            fpInfo()
+        elif(opt == "fr"):
+            fr()
+        elif(opt == "all -in"):
+            allInfo()
+        elif(opt == "clear" or opt == "cls" or opt == "clr"):
+            clear()
+        elif(opt == "op" or opt == "options"):
+            op()
+        elif(opt == "exit" or opt == "ext"):
+            print("\nGood Bye..\n>> I Love You...!!")
+            exit()
+        elif(opt == "rs" or opt == "restart" or opt == "rst"):
+            clear()
+            os.system('fi.py')
+        elif(opt == "-help"):
+            print("\nType '[option] -in' to know more about any option"
+            "\nFor Example: 'fa -in' for more info about: 'fa' "
+            "\nType 'op' to see options list"
+            "\nType 'all -in' to know about all methods"
+            "\nType 'clear', 'cls', or 'clr' to clear the console"
+            "\nType 'rs' or 'restart' or 'rst' to restart"
+            "\nType 'exit' or 'ext ' to exit the program")
+        elif(opt == "xxx"):
+            print(">> Wrong Input \n Kindly choose a correct option >>")
+            if(input() != "xxx"):
+                clear()
+                run()
             else:
+                decmsg = jwt.decode(encmsg, sec, algorithms=["HS256"])
+                origmsg = jwt.decode(decmsg['key'], sec, algorithms=["HS256"])
+                key = getpass.getpass("Enter Key : ")
+                if(key != origmsg['key']):
+                    print("Wrong Key")
+                    run()
                 print("Welcome to the Dark Side : ")
-                site = input("Search : ")
-                webbrowser.open("http://google.com/search?q="+site, new=1)
-    else:
-        print(">> Wrong Input \n Kindly choose a correct option >>")
+                while 2:
+                    site = input("Search : ")
+                    if site == "js":
+                        break
+                    webbrowser.open("http://google.com/search?q="+site, new=2)
+
+        else:
+            print(">> Wrong Input \n Kindly choose a correct option >>")
+print("\nJust Enjoy the Process")
+run()
