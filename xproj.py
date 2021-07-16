@@ -154,5 +154,5 @@ def run():
 
         else:
             print(">> Wrong Input \n Kindly choose a correct option >>")
-print("\nJust Enjoy the Process")
+print("\n>> Just Enjoy the Process")
 run()
