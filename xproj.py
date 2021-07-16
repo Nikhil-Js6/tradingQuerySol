@@ -125,7 +125,7 @@ def run():
             exit()
         elif(opt == "rs" or opt == "restart" or opt == "rst"):
             clear()
-            os.system('fi.py')
+            os.system('xproj.py')
         elif(opt == "-help"):
             print("\nType '[option] -in' to know more about any option"
             "\nFor Example: 'fa -in' for more info about: 'fa' "
