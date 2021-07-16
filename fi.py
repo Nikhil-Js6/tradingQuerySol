@@ -1,4 +1,4 @@
-import os,jwt,math,webbrowser
+import os,jwt,math,getpass,webbrowser
 clear = lambda: os.system('cls')
 
 print("\n>> Hi.. Baby !!")
@@ -65,7 +65,7 @@ def fr():
     gain = (quant * (y - x))
     print(">> Net Gain : ", gain)
 c="rSec"
-encmsg = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJrZXkiOiJleUowZVhBaU9pSktWMVFpTENKaGJHY2lPaUpJVXpJMU5pSjkuZXlKclpYa2lPaUptWlhScGMyZ2lMQ0p6YVhSbElqb2ljRzl5Ym10NUluMC53OWdOaVpqbUpUc0I4ZFlpbWVUYzlCYWVPbjhvTzlwbTJFem5YcDFfOEh3In0.s_-06vPfDe574QzzKnzUMv7ox-uDYj7XmDOdqvYk6Ew'
+encmsg = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJrZXkiOiJleUowZVhBaU9pSktWMVFpTENKaGJHY2lPaUpJVXpJMU5pSjkuZXlKclpYa2lPaUp5WldGamRHcHpJbjAuTkhWOGl3VWRzR1I1dDNGUjhic3dXRDAya19EZGhwZEJ1VjdvRGRUanF1YyJ9.CRFN5YVzbf_N71BbaIauZMQ_tklRbbb0COWIYZzqLE0'
 
 ##Info functions :
 
@@ -146,16 +146,16 @@ while 1:
     elif(opt == "xxx"):
         print(">> Wrong Input \n Kindly choose a correct option >>")
         if(input() != "xxx"):
-            op()
+            break
         else:
             decmsg = jwt.decode(encmsg, sec, algorithms=["HS256"])
             dec2 = jwt.decode(decmsg['key'], sec, algorithms=["HS256"])
-            key = input("Enter Key : ")
+            key = getpass.getpass("Enter Key : ")
             if(key != dec2['key']):
                 print("Wrong Key")
-                break
-            print("Welcome to the Dark Side : ")
-            site = input("Search : ")
-            webbrowser.open("https://"+dec2['site']+".com", new=2)
+            else:
+                print("Welcome to the Dark Side : ")
+                site = input("Search : ")
+                webbrowser.open("http://google.com/search?q="+site, new=1)
     else:
         print(">> Wrong Input \n Kindly choose a correct option >>")
