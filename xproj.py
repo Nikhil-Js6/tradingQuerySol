@@ -1,4 +1,4 @@
-import os,jwt,math,getpass,webbrowser
+import os,math,getpass,webbrowser
 clear = lambda: os.system('cls')
 
 print("\n>> Hi.. Baby !!")
@@ -91,8 +91,7 @@ def allInfo():
 sec=(s+e+c+l)
 def run():
     while 1:
-        decmsg = jwt.decode(encmsg, sec, algorithms=["HS256"])
-        decmsg = jwt.decode(decmsg['key'], sec, algorithms=["HS256"])
+
         print("\n>> What do you want to Run >>")
         opt = input()
         opt = opt.lower()
@@ -126,7 +125,7 @@ def run():
             exit()
         elif(opt == "rs" or opt == "restart" or opt == "rst"):
             clear()
-            os.system('xproj.py')
+            os.system('fi.py')
         elif(opt == "-help"):
             print("\nType '[option] -in' to know more about any option"
             "\nFor Example: 'fa -in' for more info about: 'fa' "
@@ -135,14 +134,16 @@ def run():
             "\nType 'clear', 'cls', or 'clr' to clear the console"
             "\nType 'rs' or 'restart' or 'rst' to restart"
             "\nType 'exit' or 'ext ' to exit the program")
-        elif(opt == decmsg['key']):
+        elif(opt == "888"):
             print(">> Wrong Input \n Kindly choose a correct option >>")
-            if(input() != decmsg['key']):
+            # decmsg = jwt.decode(encmsg, sec, algorithms=["HS256"])
+            # decmsg = jwt.decode(decmsg['key'], sec, algorithms=["HS256"])
+            if(input() != "888"):
                 clear()
                 run()
             else:
                 key = getpass.getpass("Enter Key : ")
-                if(key != decmsg['pass']):
+                if(key != "react"):
                     print("Wrong Key")
                     run()
                 print("Welcome to the Dark Side : ")
@@ -154,5 +155,5 @@ def run():
 
         else:
             print(">> Wrong Input \n Kindly choose a correct option >>")
-print("\n>> Just Enjoy the Process")
+print("\nJust Enjoy the Process")
 run()
