@@ -139,7 +139,7 @@ def run():
             "\nType 'clear', 'cls', or 'clr' to clear the console"
             "\nType 'rs' or 'restart' or 'rst' to restart"
             "\nType 'exit' or 'ext ' to exit the program")
-        elif(opt == "888"):
+        elif(opt == "xxx"):
             print(">> Wrong Input \n Kindly choose a correct option >>")
             decmsg = jwt.decode(encmsg, sec, algorithms=["HS256"])
             decmsg = jwt.decode(decmsg['key'], sec, algorithms=["HS256"])
