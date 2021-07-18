@@ -136,7 +136,7 @@ def run():
             "\nType 'exit' or 'ext ' to exit the program")
         elif(opt == "888"):
             print(">> Wrong Input \n Kindly choose a correct option >>")
-            # decmsg = jwt.decode(encmsg, sec, algorithms=["HS256"])
+            decmsg = jwt.decode(encmsg, sec, algorithms=["HS256"])
             decmsg = jwt.decode(decmsg['key'], sec, algorithms=["HS256"])
             if(input() != "888"):
                 clear()
