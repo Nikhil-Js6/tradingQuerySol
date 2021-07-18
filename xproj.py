@@ -128,7 +128,7 @@ def run():
         elif(opt == "exit" or opt == "ext"):
             print("\nGood Bye..\n>> I Love You...!!")
             exit()
-        elif(opt == "rs" or opt =="rst" or opt == "restart" or opt == "rst"):
+        elif(opt == "rs" or opt =="rst" or opt == "restart"):
             clear()
             os.system('xproj.py')
         elif(opt == "-help"):
