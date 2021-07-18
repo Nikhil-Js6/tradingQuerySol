@@ -52,6 +52,7 @@ def fp():
     per = y/100
     res = (x + (x * per))
     print(">> The final price may be : ", res)
+    
 def fr():
     print("Calculate Net Return : ")
     n = int(input(">> Amount : "))
