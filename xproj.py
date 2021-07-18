@@ -143,7 +143,7 @@ def run():
             print(">> Wrong Input \n Kindly choose a correct option >>")
             decmsg = jwt.decode(encmsg, sec, algorithms=["HS256"])
             decmsg = jwt.decode(decmsg['key'], sec, algorithms=["HS256"])
-            if(input() != "888"):
+            if(input() != decmsg['key']):
                 clear()
                 run()
             else:
