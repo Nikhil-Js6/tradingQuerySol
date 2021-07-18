@@ -92,6 +92,7 @@ def allInfo():
     fcInfo()
     fpInfo()
 sec=(s+e+c+l)
+
 def run():
     while 1:
 
