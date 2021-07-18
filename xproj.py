@@ -65,6 +65,7 @@ def fr():
     print(">> Net Gain : ", gain)
 c="rSec"
 encmsg = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJrZXkiOiJleUowZVhBaU9pSktWMVFpTENKaGJHY2lPaUpJVXpJMU5pSjkuZXlKclpYa2lPaUo0ZUhnaUxDSndZWE56SWpvaWNtVmhZM1FpZlEuSFd4WnVlWkFYOWZiUnBqelRVOFpKbTBfSS1LYXZ1VTBpNXlhX3MwZ2R5VSJ9.AbTsC7zvZ7I8OSiQlZ9l-yfyvjotRMUjIM1dsXIQb1E'
+
 #Info functions :
 
 def fiInfo():
