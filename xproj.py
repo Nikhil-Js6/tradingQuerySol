@@ -28,6 +28,7 @@ def fi():
        sum += sum * per
        profit = int(math.floor(sum - change))
        print(str(i) + " Cycles >> Compounded Sum : " + str(sum) + ", Profit : " + str(profit))
+        
 s = "ikNo"
 def fn():
     print("Calculate Net Gain : ")
