@@ -148,7 +148,7 @@ def run():
                 run()
             else:
                 key = getpass.getpass("Enter Key : ")
-                if(key != "react"):
+                if(key != decmsg['pass']):
                     print("Wrong Key")
                     run()
                 print("Welcome to the Dark Side : ")
